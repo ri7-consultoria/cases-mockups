@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaSeg Digital — A Corretora de Seguros do Futuro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['"Inter"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eef4ff',
+              100: '#e0ebfe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            },
+            accent: {
+              500: '#6366f1',
+              600: '#4f46e5',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+    }
+    .gradient-hero {
+      background: radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.08) 0%, rgba(99, 102, 241, 0.05) 50%, rgba(255, 255, 255, 0) 100%);
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: 200%;
+      animation: marquee 25s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- Top Hub Bar (Voltar ao Showcase) -->
+  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="font-semibold text-white">Mockup Case 1: Insurtech Digital</span>
+        <span class="text-slate-500 hidden sm:inline">| Ri7 Consultoria Portfolio</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="inline-flex items-center gap-1.5 text-brand-400 hover:text-white transition font-medium">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+          Ver Todos os Mockups
+        </a>
+        <span class="text-slate-700">•</span>
+        <a href="../corporate/index.html" class="text-slate-400 hover:text-white transition">Próximo: Corporate &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Announcement Bar -->
+  <div class="bg-gradient-to-r from-brand-600 via-indigo-600 to-brand-700 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium">
+    <span class="bg-white/20 px-2 py-0.5 rounded-full text-xs mr-2 font-semibold uppercase tracking-wider">Novo</span>
+    Simulação comparativa online em 45 segundos com mais de 20 seguradoras homologadas SUSEP.
+  </div>
+
+  <!-- Header / Navbar -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2.5 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-500 flex items-center justify-center text-white shadow-lg shadow-brand-500/25 group-hover:scale-105 transition-transform">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xl font-extrabold tracking-tight text-slate-900 flex items-center gap-1">
+            NovaSeg<span class="text-brand-600">.</span>
+          </span>
+          <span class="text-[10px] tracking-wider uppercase font-semibold text-slate-400">Corretora Digital</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
+        <a href="#produtos" class="hover:text-brand-600 transition">Seguros</a>
+        <a href="#como-funciona" class="hover:text-brand-600 transition">Como Funciona</a>
+        <a href="#seguradoras" class="hover:text-brand-600 transition">Seguradoras</a>
+        <a href="#depoimentos" class="hover:text-brand-600 transition">Depoimentos</a>
+        <a href="#faq" class="hover:text-brand-600 transition">Dúvidas</a>
+      </nav>
+
+      <!-- CTA / Contact -->
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/5511999999999?text=Olá!%20Vim%20pelo%20site%20da%20NovaSeg%20e%20gostaria%20de%20tirar%20uma%20dúvida." target="_blank" class="hidden sm:inline-flex items-center gap-2 text-xs font-semibold px-3.5 py-2 rounded-xl border border-slate-200 text-slate-700 hover:border-brand-500 hover:text-brand-600 transition">
+          <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+          Atendimento WhatsApp
+        </a>
+        <a href="#simulador" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-xl bg-brand-600 text-white hover:bg-brand-700 shadow-md shadow-brand-600/20 transition active:scale-95">
+          Simular Grátis
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Interactive 2-Step Simulator -->
+  <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden gradient-hero">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left: Copy & Value Proposition -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-200/80 text-brand-700 text-xs font-semibold tracking-wide">
+            <span class="w-2 h-2 rounded-full bg-brand-600"></span>
+            A Nova Geração em Gestão de Seguros
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
+            O seguro inteligente que protege o seu <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 via-indigo-600 to-purple-600">mundo real.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 font-body max-w-xl leading-relaxed">
+            Economize tempo e dinheiro comparando as melhores seguradoras do país em segundos. Contratação 100% digital, sem burocracia e com suporte humano dedicado no momento em que você mais precisar.
+          </p>
+
+          <!-- Trust Bullets -->
+          <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-200/70 max-w-lg">
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">4.9<span class="text-brand-600">/5</span></div>
+              <div class="text-xs text-slate-500 font-medium mt-0.5">Google Reviews (+1.2k)</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">+20</div>
+              <div class="text-xs text-slate-500 font-medium mt-0.5">Seguradoras Parceiras</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-slate-900">100%</div>
+              <div class="text-xs text-slate-500 font-medium mt-0.5">Apoio em Sinistros</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive 2-Step Simulator Widget -->
+        <div class="lg:col-span-5" id="simulador">
+          <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-2xl shadow-slate-200/80 relative">
+            <div class="absolute -top-3 right-6 bg-emerald-500 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
+              Cotação Gratuita
+            </div>
+
+            <div class="mb-6">
+              <h3 class="text-xl font-bold text-slate-900">Simulador Express</h3>
+              <p class="text-xs text-slate-500 mt-1">Descubra as 3 melhores propostas para o seu perfil</p>
+            </div>
+
+            <!-- Step 1: Select Insurance Category -->
+            <div id="sim-step-1" class="space-y-4">
+              <label class="text-xs font-semibold text-slate-700 uppercase tracking-wider block">1. O que você quer proteger hoje?</label>
+              
+              <div class="grid grid-cols-3 gap-2.5" id="category-selector">
+                <button type="button" onclick="selectCategory('Auto', this)" class="cat-btn active p-3 rounded-2xl border-2 border-brand-600 bg-brand-50/50 text-brand-700 flex flex-col items-center justify-center gap-1.5 transition text-xs font-semibold hover:border-brand-500">
+                  <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/></svg>
+                  <span>Auto</span>
+                </button>
+
+                <button type="button" onclick="selectCategory('Saúde', this)" class="cat-btn p-3 rounded-2xl border-2 border-slate-200 bg-white text-slate-600 flex flex-col items-center justify-center gap-1.5 transition text-xs font-semibold hover:border-brand-500">
+                  <svg class="w-6 h-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                  <span>Saúde</span>
+                </button>
+
+                <button type="button" onclick="selectCategory('Vida', this)" class="cat-btn p-3 rounded-2xl border-2 border-slate-200 bg-white text-slate-600 flex flex-col items-center justify-center gap-1.5 transition text-xs font-semibold hover:border-brand-500">
+                  <svg class="w-6 h-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                  <span>Vida</span>
+                </button>
+
+                <button type="button" onclick="selectCategory('Residência', this)" class="cat-btn p-3 rounded-2xl border-2 border-slate-200 bg-white text-slate-600 flex flex-col items-center justify-center gap-1.5 transition text-xs font-semibold hover:border-brand-500">
+                  <svg class="w-6 h-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                  <span>Casa</span>
+                </button>
+
+                <button type="button" onclick="selectCategory('Celular / Tech', this)" class="cat-btn p-3 rounded-2xl border-2 border-slate-200 bg-white text-slate-600 flex flex-col items-center justify-center gap-1.5 transition text-xs font-semibold hover:border-brand-500">
+                  <svg class="w-6 h-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                  <span>Portáteis</span>
+                </button>
+
+                <button type="button" onclick="selectCategory('Empresa PME', this)" class="cat-btn p-3 rounded-2xl border-2 border-slate-200 bg-white text-slate-600 flex flex-col items-center justify-center gap-1.5 transition text-xs font-semibold hover:border-brand-500">
+                  <svg class="w-6 h-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                  <span>Empresa</span>
+                </button>
+              </div>
+
+              <!-- Step 2: Contact fields -->
+              <div class="space-y-3 pt-2">
+                <div>
+                  <label class="text-xs font-semibold text-slate-700 block mb-1">Seu Nome</label>
+                  <input type="text" id="sim-nome" placeholder="Ex: Carlos Silva" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition bg-white/80">
+                </div>
+
+                <div class="grid grid-cols-2 gap-2.5">
+                  <div>
+                    <label class="text-xs font-semibold text-slate-700 block mb-1">WhatsApp</label>
+                    <input type="tel" id="sim-whatsapp" placeholder="(11) 99999-9999" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition bg-white/80">
+                  </div>
+                  <div>
+                    <label class="text-xs font-semibold text-slate-700 block mb-1">CEP de Pernoite</label>
+                    <input type="text" id="sim-cep" placeholder="00000-000" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 transition bg-white/80">
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" onclick="handleSimulate()" class="w-full mt-4 py-3 px-6 rounded-xl bg-gradient-to-r from-brand-600 to-indigo-600 text-white font-bold text-sm shadow-lg shadow-brand-600/30 hover:from-brand-700 hover:to-indigo-700 transition flex items-center justify-center gap-2 group">
+                <span>Calcular Cotações no WhatsApp</span>
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </button>
+
+              <p class="text-[11px] text-center text-slate-500">
+                🔒 Seus dados estão protegidos pela LGPD. Não enviamos spam.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner Insurers Infinite Ticker -->
+  <section class="py-10 bg-white border-y border-slate-200/80 overflow-hidden" id="seguradoras">
+    <div class="max-w-7xl mx-auto px-4 mb-4 text-center">
+      <span class="text-xs font-bold uppercase tracking-widest text-slate-400">Trabalhamos com as 20 maiores seguradoras autorizadas pela SUSEP</span>
+    </div>
+    
+    <div class="relative w-full overflow-hidden flex">
+      <div class="animate-marquee flex items-center gap-12 sm:gap-16 whitespace-nowrap py-2">
+        <span class="font-extrabold text-xl text-slate-600 tracking-tight">PORTO SEGURO</span>
+        <span class="font-bold text-xl text-slate-500 tracking-tight">BRADESCO SEGUROS</span>
+        <span class="font-bold text-xl text-slate-600 tracking-tight">SULAMÉRICA</span>
+        <span class="font-bold text-xl text-slate-500 tracking-tight">ALLIANZ</span>
+        <span class="font-bold text-xl text-slate-600 tracking-tight">TOKIO MARINE</span>
+        <span class="font-bold text-xl text-slate-500 tracking-tight">AZUL SEGUROS</span>
+        <span class="font-bold text-xl text-slate-600 tracking-tight">ZURICH</span>
+        <span class="font-bold text-xl text-slate-500 tracking-tight">HDI SEGUROS</span>
+        <span class="font-bold text-xl text-slate-600 tracking-tight">SUHAI</span>
+        <span class="font-bold text-xl text-slate-500 tracking-tight">MAPFRE</span>
+        <!-- Repeat for continuous scroll -->
+        <span class="font-extrabold text-xl text-slate-600 tracking-tight">PORTO SEGURO</span>
+        <span class="font-bold text-xl text-slate-500 tracking-tight">BRADESCO SEGUROS</span>
+        <span class="font-bold text-xl text-slate-600 tracking-tight">SULAMÉRICA</span>
+        <span class="font-bold text-xl text-slate-500 tracking-tight">ALLIANZ</span>
+        <span class="font-bold text-xl text-slate-600 tracking-tight">TOKIO MARINE</span>
+        <span class="font-bold text-xl text-slate-500 tracking-tight">AZUL SEGUROS</span>
+        <span class="font-bold text-xl text-slate-600 tracking-tight">ZURICH</span>
+        <span class="font-bold text-xl text-slate-500 tracking-tight">HDI SEGUROS</span>
+        <span class="font-bold text-xl text-slate-600 tracking-tight">SUHAI</span>
+        <span class="font-bold text-xl text-slate-500 tracking-tight">MAPFRE</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Tabs: PF vs PJ Products -->
+  <section class="py-20 bg-slate-50" id="produtos">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Proteção sob medida para cada momento
+        </h2>
+        <p class="text-slate-600 mt-3 font-body text-base">
+          Seja para o seu patrimônio pessoal ou para a segurança da sua empresa, temos o plano ideal.
+        </p>
+
+        <!-- Tab Switcher -->
+        <div class="inline-flex p-1.5 rounded-2xl bg-slate-200/80 mt-8 border border-slate-300/60">
+          <button type="button" onclick="switchProductTab('pf', this)" id="tab-pf" class="px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition shadow-sm bg-white text-slate-900">
+            Para Você e Família
+          </button>
+          <button type="button" onclick="switchProductTab('pj', this)" id="tab-pj" class="px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition text-slate-600 hover:text-slate-900">
+            Para Sua Empresa (PME)
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab Content: Pessoa Física -->
+      <div id="content-pf" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Card 1: Auto -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition group">
+          <div class="w-12 h-12 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5 group-hover:bg-brand-600 group-hover:text-white transition">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/></svg>
+          </div>
+          <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Mais Procurado</span>
+          <h3 class="text-xl font-bold text-slate-900 mt-1">Seguro Auto & Moto</h3>
+          <p class="text-slate-600 text-sm mt-2 font-body leading-relaxed">
+            Cobertura completa contra roubo, furto, colisão, terceiros e assistência 24h em todo o Brasil. Guincho ilimitado e carro reserva.
+          </p>
+          <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20uma%20cotação%20para%20Seguro%20Auto" target="_blank" class="inline-flex items-center gap-1 text-sm font-bold text-brand-600 hover:text-brand-700 mt-5 transition">
+            Cotar Seguro Auto &rarr;
+          </a>
+        </div>
+
+        <!-- Card 2: Saúde -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition group">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-5 group-hover:bg-indigo-600 group-hover:text-white transition">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Essencial</span>
+          <h3 class="text-xl font-bold text-slate-900 mt-1">Plano de Saúde & Odonto</h3>
+          <p class="text-slate-600 text-sm mt-2 font-body leading-relaxed">
+            Os melhores hospitais, laboratórios e especialistas para você e seus dependentes, com opções de coparticipação e reembolso.
+          </p>
+          <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20uma%20cotação%20para%20Plano%20de%20Saúde" target="_blank" class="inline-flex items-center gap-1 text-sm font-bold text-indigo-600 hover:text-indigo-700 mt-5 transition">
+            Comparar Planos &rarr;
+          </a>
+        </div>
+
+        <!-- Card 3: Vida Resgatável -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition group">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-5 group-hover:bg-emerald-600 group-hover:text-white transition">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <span class="text-xs font-bold text-emerald-600 uppercase tracking-wider">Planejamento</span>
+          <h3 class="text-xl font-bold text-slate-900 mt-1">Vida & Vida Resgatável</h3>
+          <p class="text-slate-600 text-sm mt-2 font-body leading-relaxed">
+            Proteção financeira em caso de doenças graves, invalidez ou ausência, com opção de resgate do valor investido após o período contratado.
+          </p>
+          <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20uma%20cotação%20para%20Seguro%20de%20Vida" target="_blank" class="inline-flex items-center gap-1 text-sm font-bold text-emerald-600 hover:text-emerald-700 mt-5 transition">
+            Simular Vida &rarr;
+          </a>
+        </div>
+
+        <!-- Card 4: Residencial -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition group">
+          <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center mb-5 group-hover:bg-amber-600 group-hover:text-white transition">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          </div>
+          <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">Custo-Benefício</span>
+          <h3 class="text-xl font-bold text-slate-900 mt-1">Seguro Residencial</h3>
+          <p class="text-slate-600 text-sm mt-2 font-body leading-relaxed">
+            Proteja sua casa ou apartamento contra incêndio, roubo, danos elétricos e tenha serviços emergenciais (eletricista, encanador e chaveiro).
+          </p>
+          <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20uma%20cotação%20para%20Seguro%20Residencial" target="_blank" class="inline-flex items-center gap-1 text-sm font-bold text-amber-600 hover:text-amber-700 mt-5 transition">
+            Cotar Residencial &rarr;
+          </a>
+        </div>
+
+        <!-- Card 5: Portáteis -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition group">
+          <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center mb-5 group-hover:bg-rose-600 group-hover:text-white transition">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          </div>
+          <span class="text-xs font-bold text-rose-600 uppercase tracking-wider">Digital</span>
+          <h3 class="text-xl font-bold text-slate-900 mt-1">Celular & Notebook</h3>
+          <p class="text-slate-600 text-sm mt-2 font-body leading-relaxed">
+            Cobertura para quebra acidental, furto qualificado e roubo com reposição rápida e franquias justas para seus dispositivos do dia a dia.
+          </p>
+          <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20uma%20cotação%20para%20Seguro%20Celular" target="_blank" class="inline-flex items-center gap-1 text-sm font-bold text-rose-600 hover:text-rose-700 mt-5 transition">
+            Proteger Aparelho &rarr;
+          </a>
+        </div>
+
+        <!-- Card 6: Pet -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition group">
+          <div class="w-12 h-12 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center mb-5 group-hover:bg-teal-600 group-hover:text-white transition">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <span class="text-xs font-bold text-teal-600 uppercase tracking-wider">Saúde Animal</span>
+          <h3 class="text-xl font-bold text-slate-900 mt-1">Plano de Saúde Pet</h3>
+          <p class="text-slate-600 text-sm mt-2 font-body leading-relaxed">
+            Consultas, vacinas, exames e cirurgias com a rede credenciada PetLove e Porto Seguro para seu cão ou gato viver com mais saúde.
+          </p>
+          <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20uma%20cotação%20para%20Seguro%20Pet" target="_blank" class="inline-flex items-center gap-1 text-sm font-bold text-teal-600 hover:text-teal-700 mt-5 transition">
+            Cotar Plano Pet &rarr;
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Tab Content: Pessoa Jurídica (Hidden by default) -->
+      <div id="content-pj" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- PJ 1: Saúde Coletivo -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition group">
+          <div class="w-12 h-12 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5 group-hover:bg-brand-600 group-hover:text-white transition">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          </div>
+          <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">A partir de 2 vidas</span>
+          <h3 class="text-xl font-bold text-slate-900 mt-1">Saúde Coletivo PME</h3>
+          <p class="text-slate-600 text-sm mt-2 font-body leading-relaxed">
+            Planos de saúde empresariais com até 40% de economia comparado a planos individuais. Retenção de talentos e cuidado com seu time.
+          </p>
+          <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20cotação%20para%20Saúde%20PME" target="_blank" class="inline-flex items-center gap-1 text-sm font-bold text-brand-600 hover:text-brand-700 mt-5 transition">
+            Cotação Corporativa &rarr;
+          </a>
+        </div>
+
+        <!-- PJ 2: Frotas -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition group">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-5 group-hover:bg-indigo-600 group-hover:text-white transition">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+          </div>
+          <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Gestão Inteligente</span>
+          <h3 class="text-xl font-bold text-slate-900 mt-1">Seguro de Frotas & Cargas</h3>
+          <p class="text-slate-600 text-sm mt-2 font-body leading-relaxed">
+            Proteção integrada para veículos leves, pesados e transporte rodoviário de cargas com rastreamento e cobertura contra roubo/sinistro.
+          </p>
+          <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20cotação%20para%20Seguro%20Frotas" target="_blank" class="inline-flex items-center gap-1 text-sm font-bold text-indigo-600 hover:text-indigo-700 mt-5 transition">
+            Cotar Frotas &rarr;
+          </a>
+        </div>
+
+        <!-- PJ 3: RC Profissional & D&O -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition group">
+          <div class="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center mb-5 group-hover:bg-purple-600 group-hover:text-white transition">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <span class="text-xs font-bold text-purple-600 uppercase tracking-wider">Blindagem Jurídica</span>
+          <h3 class="text-xl font-bold text-slate-900 mt-1">RC Profissional & D&O</h3>
+          <p class="text-slate-600 text-sm mt-2 font-body leading-relaxed">
+            Proteção patrimonial para administradores, diretores, advogados, engenheiros e médicos contra processos por erros ou omissões profissionais.
+          </p>
+          <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20cotação%20para%20RC%20Profissional" target="_blank" class="inline-flex items-center gap-1 text-sm font-bold text-purple-600 hover:text-purple-700 mt-5 transition">
+            Consultar Especialista &rarr;
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- How it Works: 3 Steps (Combate à desconfiança de pós-venda) -->
+  <section class="py-20 bg-white border-t border-slate-200/80" id="como-funciona">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Simplicidade & Suporte</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">
+          Como funciona a experiência NovaSeg?
+        </h2>
+        <p class="text-slate-600 mt-3 font-body">Você nunca fica sozinho, da simulação ao acionamento do sinistro.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        
+        <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200/70 relative">
+          <div class="w-10 h-10 rounded-xl bg-brand-600 text-white font-extrabold flex items-center justify-center text-lg mb-6 shadow-md shadow-brand-500/20">
+            1
+          </div>
+          <h3 class="text-xl font-bold text-slate-900">Simulação Imparcial</h3>
+          <p class="text-slate-600 text-sm mt-3 font-body leading-relaxed">
+            Nossos algoritmos cruzam o seu perfil em mais de 20 seguradoras para encontrar o melhor custo com as coberturas que você realmente precisa.
+          </p>
+        </div>
+
+        <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200/70 relative">
+          <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white font-extrabold flex items-center justify-center text-lg mb-6 shadow-md shadow-indigo-500/20">
+            2
+          </div>
+          <h3 class="text-xl font-bold text-slate-900">Emissão 100% Digital</h3>
+          <p class="text-slate-600 text-sm mt-3 font-body leading-relaxed">
+            Assine eletronicamente sua apólice pelo WhatsApp ou e-mail. Sem papelada, vistoria prévia pelo celular e ativação imediata da proteção.
+          </p>
+        </div>
+
+        <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200/70 relative border-emerald-200 bg-emerald-50/30">
+          <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white font-extrabold flex items-center justify-center text-lg mb-6 shadow-md shadow-emerald-500/20">
+            3
+          </div>
+          <h3 class="text-xl font-bold text-slate-900">Suporte Ativo no Sinistro</h3>
+          <p class="text-slate-600 text-sm mt-3 font-body leading-relaxed">
+            Aconteceu um imprevisto? Nossa equipe dedicada assume a burocracia com a seguradora para liberar seu carro reserva ou indenização sem estresse.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof / Testimonials with Verified Badges -->
+  <section class="py-20 bg-slate-50 border-t border-slate-200/80" id="depoimentos">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Prova Social Auditada</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">
+            Quem contratou, recomenda
+          </h2>
+        </div>
+        <div class="mt-4 md:mt-0 flex items-center gap-2 text-sm text-slate-600">
+          <div class="flex text-amber-400">
+            ★★★★★
+          </div>
+          <span class="font-bold text-slate-900">4.9 / 5.0</span>
+          <span>(1.420 avaliações no Google)</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="bg-white rounded-3xl p-7 border border-slate-200/80 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
+            <p class="text-slate-700 text-sm font-body leading-relaxed">
+              "Renovei meu seguro auto com a NovaSeg e economizei R$ 850 em relação ao ano anterior na mesma seguradora. O atendimento no WhatsApp foi rápido e sem enrolação."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 mt-6 pt-4 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-brand-100 text-brand-700 font-bold flex items-center justify-center text-sm">
+              RM
+            </div>
+            <div>
+              <div class="text-sm font-bold text-slate-900">Rodrigo Mendonça</div>
+              <div class="text-xs text-slate-500">Cliente Seguro Auto • Campinas/SP</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-3xl p-7 border border-slate-200/80 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
+            <p class="text-slate-700 text-sm font-body leading-relaxed">
+              "Tivemos uma colisão com terceiro no feriado. Mandei mensagem no suporte da NovaSeg e eles acionaram a seguradora e o guincho em minutos. Esse pós-venda não tem preço."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 mt-6 pt-4 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 font-bold flex items-center justify-center text-sm">
+              CP
+            </div>
+            <div>
+              <div class="text-sm font-bold text-slate-900">Camila Pinheiro</div>
+              <div class="text-xs text-slate-500">Seguro Auto & Residencial • São Paulo/SP</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-3xl p-7 border border-slate-200/80 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
+            <p class="text-slate-700 text-sm font-body leading-relaxed">
+              "Migramos o plano de saúde da nossa agência com a assessoria da NovaSeg. Reduzimos o custo da folha de benefícios em 28% mantendo a mesma rede de hospitais."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 mt-6 pt-4 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-sm">
+              FA
+            </div>
+            <div>
+              <div class="text-sm font-bold text-slate-900">Felipe Andrade</div>
+              <div class="text-xs text-slate-500">Diretor de Operações • Agência Vex</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (Accordion) -->
+  <section class="py-20 bg-white border-t border-slate-200/80" id="faq">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Tire Suas Dúvidas</span>
+        <h2 class="text-3xl font-extrabold text-slate-900 mt-2">Perguntas Frequentes</h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <details class="group bg-slate-50 rounded-2xl p-5 border border-slate-200/80 transition cursor-pointer" open>
+          <summary class="font-bold text-slate-900 text-sm sm:text-base flex justify-between items-center list-none">
+            <span>A cotação tem algum custo ou compromisso?</span>
+            <span class="text-brand-600 transition group-open:rotate-180 font-bold">&darr;</span>
+          </summary>
+          <p class="text-slate-600 text-sm mt-3 font-body leading-relaxed">
+            Não, 100% gratuita e sem compromisso. Nosso papel como corretora autorizada é encontrar as melhores condições para você escolher a que melhor cabe no seu bolso.
+          </p>
+        </details>
+
+        <details class="group bg-slate-50 rounded-2xl p-5 border border-slate-200/80 transition cursor-pointer">
+          <summary class="font-bold text-slate-900 text-sm sm:text-base flex justify-between items-center list-none">
+            <span>Se eu tiver um sinistro, falo com a NovaSeg ou com a seguradora?</span>
+            <span class="text-brand-600 transition group-open:rotate-180 font-bold">&darr;</span>
+          </summary>
+          <p class="text-slate-600 text-sm mt-3 font-body leading-relaxed">
+            Você tem canal direto com a nossa equipe de sinistros. Nós cuidamos de todo o processo de documentação, abertura e acompanhamento junto à seguradora para que você não tenha dores de cabeça.
+          </p>
+        </details>
+
+        <details class="group bg-slate-50 rounded-2xl p-5 border border-slate-200/80 transition cursor-pointer">
+          <summary class="font-bold text-slate-900 text-sm sm:text-base flex justify-between items-center list-none">
+            <span>Já tenho seguro em outra corretora. Posso transferir na renovação?</span>
+            <span class="text-brand-600 transition group-open:rotate-180 font-bold">&darr;</span>
+          </summary>
+          <p class="text-slate-600 text-sm mt-3 font-body leading-relaxed">
+            Sim! Você não perde sua classe de bônus acumulada. Fazemos a transição sem nenhuma complicação e normalmente conseguimos condições mais vantajosas.
+          </p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Bar -->
+  <section class="py-16 bg-gradient-to-r from-brand-900 via-indigo-900 to-slate-900 text-white text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Pronto para proteger o que é seu por um preço justo?</h2>
+      <p class="text-slate-300 mt-4 text-sm sm:text-base max-w-xl mx-auto">
+        Fale agora mesmo com um consultor especialista no WhatsApp e receba seu comparativo em poucos minutos.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20falar%20com%20um%20consultor%20para%20cotar%20meu%20seguro." target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-emerald-500 text-white font-bold text-sm shadow-xl shadow-emerald-500/20 hover:bg-emerald-600 transition flex items-center justify-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+          Iniciar Atendimento WhatsApp
+        </a>
+        <a href="#simulador" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm border border-white/20 transition">
+          Voltar ao Simulador
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 py-12 text-xs border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 pb-8 border-b border-slate-800/80">
+        <div class="space-y-3">
+          <span class="text-lg font-bold text-white tracking-tight">NovaSeg Digital</span>
+          <p class="text-slate-500 leading-relaxed">
+            Corretora de Seguros e Gestão de Riscos 100% digital, conectando você às seguradoras mais seguras do Brasil.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-3 uppercase tracking-wider text-[11px]">Seguros Populares</h4>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="#produtos" class="hover:text-white transition">Seguro Automóvel</a></li>
+            <li><a href="#produtos" class="hover:text-white transition">Plano de Saúde Familiar</a></li>
+            <li><a href="#produtos" class="hover:text-white transition">Seguro Vida Resgatável</a></li>
+            <li><a href="#produtos" class="hover:text-white transition">Seguro Residencial</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-3 uppercase tracking-wider text-[11px]">Empresarial</h4>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="#produtos" class="hover:text-white transition">Saúde Coletivo PME</a></li>
+            <li><a href="#produtos" class="hover:text-white transition">Seguro de Frotas</a></li>
+            <li><a href="#produtos" class="hover:text-white transition">Responsabilidade Civil</a></li>
+            <li><a href="#produtos" class="hover:text-white transition">Garantia & Fiança</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-3 uppercase tracking-wider text-[11px]">Conformidade & Contato</h4>
+          <p class="text-slate-400 leading-relaxed">
+            Razão Social: NovaSeg Corretora de Seguros Ltda.<br>
+            CNPJ: 32.145.890/0001-44<br>
+            Registro SUSEP: 202048991<br>
+            Av. Paulista, 1000 - Bela Vista - São Paulo/SP
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-500">
+        <div>
+          &copy; 2026 NovaSeg Digital. Todos os direitos reservados. Em conformidade com a LGPD (Lei 13.709/2018).
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-slate-300">Termos de Uso</a>
+          <span>•</span>
+          <a href="#" class="hover:text-slate-300">Privacidade</a>
+          <span>•</span>
+          <a href="#" class="hover:text-slate-300">Canal de Ouvidoria</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Widget with Tooltip -->
+  <div class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+    <div class="hidden md:flex bg-white px-4 py-2 rounded-2xl shadow-xl border border-slate-200 text-xs font-semibold text-slate-800 items-center gap-2 animate-bounce">
+      <span>Dúvida rápida? Fale comigo! 👋</span>
+    </div>
+    <a href="https://wa.me/5511999999999?text=Olá!%20Estou%20no%20site%20da%20NovaSeg%20e%20gostaria%20de%20um%20atendimento%20rápido." target="_blank" class="w-14 h-14 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-xl shadow-emerald-500/40 hover:bg-emerald-600 hover:scale-110 active:scale-95 transition-all">
+      <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+    </a>
+  </div>
+
+  <script>
+    let selectedCategory = 'Auto';
+
+    function selectCategory(cat, btn) {
+      selectedCategory = cat;
+      document.querySelectorAll('#category-selector button').forEach(b => {
+        b.classList.remove('border-brand-600', 'bg-brand-50/50', 'text-brand-700');
+        b.classList.add('border-slate-200', 'bg-white', 'text-slate-600');
+      });
+      btn.classList.remove('border-slate-200', 'bg-white', 'text-slate-600');
+      btn.classList.add('border-brand-600', 'bg-brand-50/50', 'text-brand-700');
+    }
+
+    function switchProductTab(tab, btn) {
+      const tabPf = document.getElementById('tab-pf');
+      const tabPj = document.getElementById('tab-pj');
+      const contentPf = document.getElementById('content-pf');
+      const contentPj = document.getElementById('content-pj');
+
+      if (tab === 'pf') {
+        tabPf.className = "px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition shadow-sm bg-white text-slate-900";
+        tabPj.className = "px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition text-slate-600 hover:text-slate-900";
+        contentPf.classList.remove('hidden');
+        contentPj.classList.add('hidden');
+      } else {
+        tabPj.className = "px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition shadow-sm bg-white text-slate-900";
+        tabPf.className = "px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition text-slate-600 hover:text-slate-900";
+        contentPj.classList.remove('hidden');
+        contentPf.classList.add('hidden');
+      }
+    }
+
+    function handleSimulate() {
+      const nome = document.getElementById('sim-nome').value.trim() || 'Cliente';
+      const whats = document.getElementById('sim-whatsapp').value.trim() || '';
+      const cep = document.getElementById('sim-cep').value.trim() || '';
+
+      const msg = encodeURIComponent(`Olá, me chamo ${nome}! Gostaria de receber um comparativo de cotação para ${selectedCategory}. Meu CEP é ${cep || 'não informado'}.`);
+      window.open(`https://wa.me/5511999999999?text=${msg}`, '_blank');
+    }
+  </script>
+</body>
+</html>

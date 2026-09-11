@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valence — Gestão de Riscos & Corretora Corporativa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Lora"', 'serif'],
+          },
+          colors: {
+            navy: {
+              800: '#0f172a',
+              900: '#0a1128',
+              950: '#050a18',
+            },
+            emerald: {
+              700: '#047857',
+              800: '#065f46',
+            },
+            champagne: {
+              400: '#d4af37',
+              500: '#c5a880',
+              600: '#b08d5b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#FBFBFD] text-slate-900 font-sans antialiased selection:bg-navy-900 selection:text-champagne-400">
+
+  <!-- Top Hub Bar (Navegação do Showcase) -->
+  <div class="bg-navy-950 text-slate-400 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-champagne-400 animate-pulse"></span>
+        <span class="font-semibold text-white">Mockup Case 2: Corporate & Wealth Advisory</span>
+        <span class="text-slate-500 hidden sm:inline">| Ri7 Consultoria Portfolio</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="../../index.html" class="inline-flex items-center gap-1.5 text-champagne-400 hover:text-white transition font-medium">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+          Ver Todos os Mockups
+        </a>
+        <span class="text-slate-700">•</span>
+        <a href="../comercial/index.html" class="text-slate-400 hover:text-white transition">Próximo: Comercial &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Corporate Institutional Top Bar -->
+  <div class="bg-navy-900 text-slate-300 text-xs py-2 px-4 border-b border-navy-800/80">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-6">
+        <span class="flex items-center gap-1.5 text-slate-300">
+          <span class="text-champagne-400 font-semibold">SUSEP Nº</span> 42.109.892/0001
+        </span>
+        <span class="hidden md:inline-flex items-center gap-1.5 text-slate-400">
+          Mesa Corporativa: (11) 3180-9200
+        </span>
+        <span class="hidden lg:inline text-slate-400">
+          Itaim Bibi • São Paulo/SP
+        </span>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <span class="text-emerald-400 flex items-center gap-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+          Plantão de Sinistros 24/7 Ativo
+        </span>
+        <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20falar%20com%20um%20consultor%20corporativo%20da%20Valence." target="_blank" class="text-champagne-400 hover:text-white transition font-medium">
+          WhatsApp Corporativo
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/90">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-lg bg-navy-900 border border-champagne-500/40 flex items-center justify-center text-champagne-400 shadow-md">
+          <span class="font-serif font-bold text-xl">V</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xl font-bold tracking-tight text-navy-950 font-serif">
+            VALENCE
+          </span>
+          <span class="text-[9px] tracking-[0.2em] uppercase font-semibold text-slate-500">Risk & Insurance Advisory</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-700">
+        <a href="#solucoes" class="hover:text-navy-900 transition">Linhas de Solução</a>
+        <a href="#sinistros" class="hover:text-navy-900 transition">Núcleo de Sinistros</a>
+        <a href="#governanca" class="hover:text-navy-900 transition">Governança & Tradição</a>
+        <a href="#depoimentos" class="hover:text-navy-900 transition">Clientes B2B</a>
+      </nav>
+
+      <!-- Consultative CTA -->
+      <div class="flex items-center gap-3">
+        <a href="#diagnostico" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold px-5 py-2.5 rounded-lg bg-navy-900 text-white hover:bg-navy-800 border border-champagne-500/30 shadow-md shadow-navy-900/10 transition">
+          Agendar Diagnóstico
+          <svg class="w-4 h-4 text-champagne-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-16 pb-24 bg-gradient-to-b from-[#F2F5F8] via-[#F8FAFC] to-white border-b border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-navy-900 text-champagne-400 text-xs font-semibold uppercase tracking-wider mb-6">
+          Consultoria Boutique em Gestão de Riscos
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-navy-950 tracking-tight leading-[1.15]">
+          Proteção patrimonial e inteligência securitária para quem não pode falhar.
+        </h1>
+
+        <p class="text-lg text-slate-600 font-sans mt-6 leading-relaxed">
+          Assessoramos diretorias executivas, frotistas e famílias empresárias na estruturação e auditoria de apólices complexas. Mais de R$ 240 milhões em riscos corporativos geridos com atendimento técnico e imparcial.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+          <a href="#diagnostico" class="px-7 py-4 rounded-lg bg-navy-900 text-white font-bold text-sm hover:bg-navy-800 transition flex items-center justify-center gap-2 shadow-lg shadow-navy-900/15">
+            Solicitar Auditoria Gratuita de Apólices
+            <svg class="w-4 h-4 text-champagne-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+          <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20conversa%20com%20um%20consultor%20sênior%20da%20Valence." target="_blank" class="px-7 py-4 rounded-lg border border-slate-300 bg-white hover:border-navy-900 text-slate-800 font-bold text-sm transition flex items-center justify-center gap-2">
+            <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            Falar com Consultor Sênior
+          </a>
+        </div>
+      </div>
+
+      <!-- Trust Metrics Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-16 pt-12 border-t border-slate-200">
+        <div class="bg-white p-6 rounded-xl border border-slate-200/90 shadow-sm">
+          <div class="text-3xl font-serif font-bold text-navy-950">+22 Anos</div>
+          <p class="text-xs text-slate-500 font-semibold uppercase tracking-wider mt-1">Histórico de Mercado</p>
+          <p class="text-xs text-slate-600 mt-2">Fundada em 2004, com relacionamento estratégico junto às principais seguradoras multinacionais.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-slate-200/90 shadow-sm">
+          <div class="text-3xl font-serif font-bold text-navy-950">R$ 240M+</div>
+          <p class="text-xs text-slate-500 font-semibold uppercase tracking-wider mt-1">Capital Protegido</p>
+          <p class="text-xs text-slate-600 mt-2">Apólices ativas de indústrias, frotas, incorporações imobiliárias e riscos cibernéticos.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-slate-200/90 shadow-sm border-emerald-300/80 bg-emerald-50/20">
+          <div class="text-3xl font-serif font-bold text-emerald-800">15 min</div>
+          <p class="text-xs text-emerald-700 font-semibold uppercase tracking-wider mt-1">SLA Abertura de Sinistro</p>
+          <p class="text-xs text-slate-600 mt-2">Núcleo de sinistros próprio com advogados e peritos para defender seus interesses contratuais.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Insurers Credential Bar -->
+  <section class="py-10 bg-slate-100/70 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-xs font-bold uppercase tracking-widest text-slate-500 mb-6">
+        Relacionamento Homologado com os Maiores Grupos Seguradores Globais
+      </p>
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-14 opacity-75 grayscale hover:grayscale-0 transition-all">
+        <span class="font-extrabold text-slate-700 tracking-tight text-lg">ZURICH</span>
+        <span class="font-bold text-slate-700 tracking-tight text-lg">CHUBB</span>
+        <span class="font-bold text-slate-700 tracking-tight text-lg">ALLIANZ</span>
+        <span class="font-bold text-slate-700 tracking-tight text-lg">TOKIO MARINE</span>
+        <span class="font-bold text-slate-700 tracking-tight text-lg">PORTO SEGURO</span>
+        <span class="font-bold text-slate-700 tracking-tight text-lg">BRADESCO SEGUROS</span>
+        <span class="font-bold text-slate-700 tracking-tight text-lg">SULAMÉRICA</span>
+        <span class="font-bold text-slate-700 tracking-tight text-lg">MAPFRE</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 Pillars of Risk Solutions -->
+  <section class="py-20 bg-white" id="solucoes">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-wider text-champagne-600">Matriz de Soluções</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-navy-950 mt-2">
+          Especialização por Linhas de Risco
+        </h2>
+        <p class="text-slate-600 mt-3 font-sans">
+          Eliminamos brechas contratuais e sobreposição de prêmios com auditorias técnicas.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Pillar 1 -->
+        <div class="p-8 rounded-2xl border border-slate-200 bg-[#FBFBFD] hover:border-navy-900 transition">
+          <div class="w-12 h-12 rounded-lg bg-navy-900 text-champagne-400 flex items-center justify-center mb-6 font-bold text-lg">
+            01
+          </div>
+          <h3 class="text-2xl font-serif font-bold text-navy-950">Riscos Patrimoniais & Engenharia</h3>
+          <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+            Estruturação de apólices para parques fabris, centros de distribuição, condomínios comerciais e grandes obras civis.
+          </p>
+          <ul class="mt-4 space-y-2 text-xs font-semibold text-slate-700">
+            <li class="flex items-center gap-2">&check; Incêndio, Raio, Explosão e Danos Elétricos</li>
+            <li class="flex items-center gap-2">&check; Lucros Cessantes e Interrupção de Negócios</li>
+            <li class="flex items-center gap-2">&check; Riscos de Engenharia e Instalação (CAR / EAR)</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="p-8 rounded-2xl border border-slate-200 bg-[#FBFBFD] hover:border-navy-900 transition">
+          <div class="w-12 h-12 rounded-lg bg-navy-900 text-champagne-400 flex items-center justify-center mb-6 font-bold text-lg">
+            02
+          </div>
+          <h3 class="text-2xl font-serif font-bold text-navy-950">Frotas Corporativas & Logística</h3>
+          <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+            Gestão integrada para transportadoras, locadoras e frotas executivas, com tecnologia de telemetria e controle de sinistralidade.
+          </p>
+          <ul class="mt-4 space-y-2 text-xs font-semibold text-slate-700">
+            <li class="flex items-center gap-2">&check; Frotas Leves e Pesadas com Franquias Reduzidas</li>
+            <li class="flex items-center gap-2">&check; Seguro de Cargas (RCTR-C, RC-DC e Internacional)</li>
+            <li class="flex items-center gap-2">&check; Mesa de Assistência 24h para Despacho Imediato</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="p-8 rounded-2xl border border-slate-200 bg-[#FBFBFD] hover:border-navy-900 transition">
+          <div class="w-12 h-12 rounded-lg bg-navy-900 text-champagne-400 flex items-center justify-center mb-6 font-bold text-lg">
+            03
+          </div>
+          <h3 class="text-2xl font-serif font-bold text-navy-950">Financial Lines & Governança (D&O)</h3>
+          <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+            Blindagem para administradores, membros de conselho e diretores executivos contra riscos regulatórios e ações judiciais.
+          </p>
+          <ul class="mt-4 space-y-2 text-xs font-semibold text-slate-700">
+            <li class="flex items-center gap-2">&check; Seguro D&O (Directors and Officers Liability)</li>
+            <li class="flex items-center gap-2">&check; Seguro Garantia Judicial e Fiança Locatícia</li>
+            <li class="flex items-center gap-2">&check; Proteção contra Ataques e Riscos Cibernéticos (Cyber)</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="p-8 rounded-2xl border border-slate-200 bg-[#FBFBFD] hover:border-navy-900 transition">
+          <div class="w-12 h-12 rounded-lg bg-navy-900 text-champagne-400 flex items-center justify-center mb-6 font-bold text-lg">
+            04
+          </div>
+          <h3 class="text-2xl font-serif font-bold text-navy-950">Wealth Management & Vida Resgatável</h3>
+          <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+            Planejamento sucessório, seguro de homem-chave (*Key Person*) e vida inteira resgatável para sócios e executivos seniores.
+          </p>
+          <ul class="mt-4 space-y-2 text-xs font-semibold text-slate-700">
+            <li class="flex items-center gap-2">&check; Liquidez Imediata em Sucessão Familiar sem Inventário</li>
+            <li class="flex items-center gap-2">&check; Seguro Homem-Chave para Continuidade do Negócio</li>
+            <li class="flex items-center gap-2">&check; Planos de Saúde Corporativos com Reembolso Executivo</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Núcleo de Sinistros Section (Combate decisivo à dor do cliente) -->
+  <section class="py-20 bg-navy-950 text-white" id="sinistros">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-xs font-bold uppercase tracking-widest text-champagne-400">O Verdadeiro Diferencial</span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold leading-tight">
+            Núcleo Técnico Próprio de Regulação de Sinistros
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            A maioria das corretoras entrega a apólice e transfere a responsabilidade para um 0800 impessoal na hora do sinistro. Na Valence, nós montamos uma estrutura jurídica e pericial que defende o seu contrato.
+          </p>
+
+          <div class="space-y-4 pt-4 border-t border-slate-800">
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-lg bg-emerald-700/40 text-emerald-400 flex items-center justify-center shrink-0 mt-1">
+                &check;
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-white">SLA de 15 Minutos para Resposta</h4>
+                <p class="text-xs text-slate-400 mt-1">Acionamento imediato da equipe pericial sem filas ou menus eletrônicos.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-lg bg-emerald-700/40 text-emerald-400 flex items-center justify-center shrink-0 mt-1">
+                &check;
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-white">Elaboração do Dossiê Técnico</h4>
+                <p class="text-xs text-slate-400 mt-1">Compilação rigorosa de laudos para evitar negativas indevidas de indenização.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-lg bg-emerald-700/40 text-emerald-400 flex items-center justify-center shrink-0 mt-1">
+                &check;
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-white">Negociação Direta em Nível de Diretoria</h4>
+                <p class="text-xs text-slate-400 mt-1">Canal direto com os superintendentes das maiores seguradoras do país.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 bg-navy-900 p-8 sm:p-10 rounded-2xl border border-slate-800 shadow-2xl relative">
+          <div class="text-xs uppercase font-bold text-champagne-400 tracking-wider mb-2">Canal Direto de Incidentes</div>
+          <h3 class="text-2xl font-serif font-bold text-white mb-4">Plantão Executivo de Sinistros</h3>
+          <p class="text-xs text-slate-400 mb-6">Linha prioritária dedicada para empresas clientes da Valence.</p>
+          
+          <div class="bg-navy-950 p-4 rounded-xl border border-slate-800 flex items-center justify-between mb-4">
+            <div>
+              <div class="text-[10px] uppercase font-bold text-slate-400">Linha de Emergência 24/7</div>
+              <div class="text-base font-bold text-white">0800 770 9100</div>
+            </div>
+            <span class="px-3 py-1 bg-emerald-800/40 text-emerald-400 text-xs font-semibold rounded-md">Ativo</span>
+          </div>
+
+          <a href="https://wa.me/5511999999999?text=URGENTE:%20Preciso%20de%20suporte%20no%20sinistro%20da%20minha%20empresa." target="_blank" class="w-full py-3.5 px-6 rounded-lg bg-champagne-500 hover:bg-champagne-400 text-navy-950 font-bold text-sm transition flex items-center justify-center gap-2">
+            Acionar Regulador de Sinistro via WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Executive Social Proof (LinkedIn Verified Style) -->
+  <section class="py-20 bg-white border-t border-slate-200" id="depoimentos">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-wider text-champagne-600">Relacionamentos de Longo Prazo</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-navy-950 mt-2">
+          O que dizem os tomadores de decisão
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="p-8 rounded-2xl border border-slate-200 bg-[#FBFBFD] flex flex-col justify-between">
+          <p class="text-slate-700 text-sm italic font-serif leading-relaxed">
+            "A auditoria da Valence identificou uma brecha crítica na nossa apólice de lucros cessantes que nenhuma corretora anterior havia apontado. Essa revisão salvou a operação durante a tempestade de 2024."
+          </p>
+          <div class="mt-6 pt-4 border-t border-slate-200">
+            <div class="font-bold text-navy-950 text-sm">Dr. Marcelo Guimarães</div>
+            <div class="text-xs text-slate-500">CFO • Grupo Logístico Vanguarda</div>
+            <div class="text-[11px] text-emerald-700 font-semibold mt-1">Perfil Verificado no LinkedIn &bull; Cliente há 7 anos</div>
+          </div>
+        </div>
+
+        <div class="p-8 rounded-2xl border border-slate-200 bg-[#FBFBFD] flex flex-col justify-between">
+          <p class="text-slate-700 text-sm italic font-serif leading-relaxed">
+            "Gerenciar o seguro de 18 canteiros de obras simultâneos exige precisão cirúrgica. A Valence nos entrega apólices de Riscos de Engenharia em prazos recordes e com as menores franquias do mercado."
+          </p>
+          <div class="mt-6 pt-4 border-t border-slate-200">
+            <div class="font-bold text-navy-950 text-sm">Eng. Roberto Castelo</div>
+            <div class="text-xs text-slate-500">Diretor de Engenharia • Engecorp Construtora</div>
+            <div class="text-[11px] text-emerald-700 font-semibold mt-1">Perfil Verificado no LinkedIn &bull; Cliente há 4 anos</div>
+          </div>
+        </div>
+
+        <div class="p-8 rounded-2xl border border-slate-200 bg-[#FBFBFD] flex flex-col justify-between">
+          <p class="text-slate-700 text-sm italic font-serif leading-relaxed">
+            "Reestruturamos todo o benefício de saúde e vida corporativa de nossos 850 colaboradores. Conseguimos 22% de redução no reajuste anual mantendo os hospitais de primeira linha."
+          </p>
+          <div class="mt-6 pt-4 border-t border-slate-200">
+            <div class="font-bold text-navy-950 text-sm">Beatriz Vasconcelos</div>
+            <div class="text-xs text-slate-500">Head de People & Culture • Nexo Finanças</div>
+            <div class="text-[11px] text-emerald-700 font-semibold mt-1">Perfil Verificado no LinkedIn &bull; Cliente há 5 anos</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Consultative Diagnostic Form Section -->
+  <section class="py-20 bg-slate-100/60 border-t border-slate-200" id="diagnostico">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl border border-slate-300/80 p-8 sm:p-12 shadow-xl">
+        <div class="max-w-xl mx-auto text-center mb-8">
+          <h3 class="text-2xl sm:text-3xl font-serif font-bold text-navy-950">
+            Solicite um Diagnóstico de Riscos para sua Empresa
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-600 mt-2">
+            Nossos consultores analisarão suas apólices atuais sem qualquer custo ou compromisso de contratação.
+          </p>
+        </div>
+
+        <form class="space-y-4 max-w-lg mx-auto" onsubmit="event.preventDefault(); alert('Diagnóstico solicitado com sucesso! Nossa equipe entrará em contato em até 2 horas úteis.');">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="text-xs font-semibold text-slate-700 block mb-1">Nome do Solicitante</label>
+              <input type="text" required placeholder="Seu nome" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:border-navy-900">
+            </div>
+            <div>
+              <label class="text-xs font-semibold text-slate-700 block mb-1">Cargo / Função</label>
+              <input type="text" required placeholder="Ex: Diretor, CFO, Gerente" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:border-navy-900">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="text-xs font-semibold text-slate-700 block mb-1">E-mail Corporativo</label>
+              <input type="email" required placeholder="voce@empresa.com.br" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:border-navy-900">
+            </div>
+            <div>
+              <label class="text-xs font-semibold text-slate-700 block mb-1">Telefone / WhatsApp</label>
+              <input type="tel" required placeholder="(11) 90000-0000" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:border-navy-900">
+            </div>
+          </div>
+
+          <div>
+            <label class="text-xs font-semibold text-slate-700 block mb-1">Principal Modalidade de Interesse</label>
+            <select class="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:border-navy-900 bg-white">
+              <option>Auditoria Geral de Todas as Apólices</option>
+              <option>Seguro de Frotas & Transporte de Cargas</option>
+              <option>Saúde Corporativo & Benefícios PME</option>
+              <option>Riscos Patrimoniais, Obras e Engenharia</option>
+              <option>Responsabilidade Civil & D&O Executivo</option>
+              <option>Planejamento Sucessório & Vida Resgatável</option>
+            </select>
+          </div>
+
+          <button type="submit" class="w-full py-4 rounded-lg bg-navy-900 hover:bg-navy-800 text-white font-bold text-sm tracking-wide transition shadow-md">
+            Agendar Reunião Técnica de Diagnóstico
+          </button>
+
+          <p class="text-[11px] text-slate-500 text-center mt-2">
+            Termo de Confidencialidade (NDA) tácito aplicado a todos os documentos e apólices avaliados.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Corporate Footer -->
+  <footer class="bg-navy-950 text-slate-400 py-12 text-xs border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 pb-8 border-b border-slate-800">
+        <div>
+          <span class="text-lg font-serif font-bold text-white tracking-tight">VALENCE</span>
+          <p class="text-slate-500 mt-2 leading-relaxed">
+            Corretora e Consultoria de Riscos Corporativos, especializada na assessoria contínua de contratos securitários de alta complexidade.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-3 uppercase tracking-wider text-[11px]">Setores Atendidos</h4>
+          <ul class="space-y-1.5 text-slate-400">
+            <li>Transporte & Logística</li>
+            <li>Construção Civil & Incorporação</li>
+            <li>Indústria & Agronegócio</li>
+            <li>Holdings Familiares & Wealth</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-3 uppercase tracking-wider text-[11px]">Sede Corporativa</h4>
+          <p class="text-slate-400 leading-relaxed">
+            Av. Brigadeiro Faria Lima, 3.477 - 14º andar<br>
+            Itaim Bibi • São Paulo / SP - CEP 04538-133<br>
+            Contato: corporate@valenceadvisory.com.br
+          </p>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-3 uppercase tracking-wider text-[11px]">Compliance & Órgãos Reguladores</h4>
+          <p class="text-slate-400 leading-relaxed">
+            Razão Social: Valence Risk Corretora de Seguros S.A.<br>
+            CNPJ: 08.921.450/0001-92<br>
+            Registro SUSEP: 42.109.892/0001<br>
+            Código de Ética e Governança Corporativa
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-500">
+        <div>
+          &copy; 2026 Valence Risk & Insurance Advisory. Todos os direitos reservados. Em conformidade com a LGPD.
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-slate-300">Canal de Compliance</a>
+          <span>•</span>
+          <a href="#" class="hover:text-slate-300">Termos e Condições</a>
+          <span>•</span>
+          <a href="#" class="hover:text-slate-300">Política de Privacidade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

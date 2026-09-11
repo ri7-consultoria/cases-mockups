@@ -1,0 +1,14 @@
+{
+  "name": "cases-mockups",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Showcase e mockups institucionais de alta fidelidade para corretoras de seguros - Ri7 Consultoria",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.2"
+  }
+}
