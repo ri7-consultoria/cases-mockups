@@ -9,7 +9,6 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         insurtech: resolve(__dirname, 'cases/insurtech/index.html'),
         corporate: resolve(__dirname, 'cases/corporate/index.html'),
-        comercial: resolve(__dirname, 'cases/comercial/index.html'),
       },
     },
   },
